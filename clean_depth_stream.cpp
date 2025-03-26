@@ -52,6 +52,8 @@ int main() try {
 
                     int w = filtered.as<rs2::video_frame>().get_width();
                     int h = filtered.as<rs2::video_frame>().get_height();
+                    std::cout << "w: " << w << std::endl;
+                    std::cout << "h: " << h << std::endl;
 
                     cv::Mat depth_mat(cv::Size(w, h), CV_16UC1, (void*)filtered.get_data());
                     
